@@ -1,7 +1,7 @@
-package ml.minli.util;
+package io.github.mlpre.util;
 
 import java.io.*;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class FileUtil {
 
@@ -27,7 +27,7 @@ public class FileUtil {
 
     public static void write(File file, String text) {
         try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, Charset.forName("UTF-8"), false));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, StandardCharsets.UTF_8, false));
             bufferedWriter.write(text);
             bufferedWriter.flush();
             bufferedWriter.close();
@@ -38,7 +38,7 @@ public class FileUtil {
 
     public static String read(File file) {
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file, Charset.forName("UTF-8")));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8));
             String line = null;
             StringBuilder stringBuilder = new StringBuilder();
             while ((line = bufferedReader.readLine()) != null) {

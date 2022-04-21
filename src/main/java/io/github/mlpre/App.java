@@ -1,11 +1,11 @@
-package ml.minli;
+package io.github.mlpre;
 
-import ml.minli.util.FileUtil;
-import ml.minli.util.MailUtil;
+import io.github.mlpre.util.FileUtil;
+import io.github.mlpre.util.MailUtil;
 
 import java.io.File;
 
-public class MainApp {
+public class App {
 
     public static void main(String[] args) {
         boot();
